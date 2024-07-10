@@ -102,6 +102,7 @@ class PendaftarController extends Controller
      */
     public function destroy(Pendaftar $pendaftar)
     {
-        //
+        $pendaftar->delete();
+        return redirect()->route('pendaftar.index')->with('success', 'Berhasil menghapus data!');
     }
 }
